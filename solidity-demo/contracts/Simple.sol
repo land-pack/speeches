@@ -1,13 +1,21 @@
 pragma solidity ^0.4.17;
 
+
 contract Simple {
   uint myVariable;
-    function Simple() {
+  event Odd();
+  event Even();
+
+  function Simple() {
 
    }
-   function set(uint x) public {
-     assert(x ==0);
+  function set(uint x) public {
      myVariable = x;
+     if(x % 2 == 0){
+       Odd();
+     }else{
+       Even();
+     }
    }
    function get() constant public returns(uint) {
     return myVariable;
