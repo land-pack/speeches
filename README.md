@@ -38,3 +38,30 @@ Compile your solidity project with `truffle`.
     truffle compile
 
 
+Run your rpc server, there several rpc server available here, (i.e `testrpc`, `truffle develop`).
+I gotta demo it with `truffe develop`, open your second terminal, and then run the below commnad
+inside your project!
+
+    cd your-project-name
+    truffle develop
+    
+    # should listen default port 9545
+
+Migrate your project by two way! input `migrate` on your develop console, or just run  truffle with migrate
+subcommand.
+
+    #1 
+    truffle migrate
+
+    # or 2
+    > migrate
+
+Interacting with the basic smart contract
+====
+
+    
+    # Get the value of your variable 
+    Simple.deployed().then(function(instance){return instance.get.call();}).then(function(value){return value.toNumber()});
+
+    # Set the value of your variable 
+    Simple.deployed().then(function(instance){return instance.set(7);});   
