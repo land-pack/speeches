@@ -6,9 +6,8 @@ contract Simple {
 
    }
    function set(uint x) public {
-     while(true){
-      myVariable = x;
-     }
+     assert(x ==0);
+     myVariable = x;
    }
    function get() constant public returns(uint) {
     return myVariable;
