@@ -9,6 +9,7 @@ contract Simple {
   function Simple() {
 
    }
+
   function set(uint x) public {
      myVariable = x;
      if(x % 2 == 0){
