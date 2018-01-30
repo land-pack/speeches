@@ -65,3 +65,6 @@ Interacting with the basic smart contract
 
     # Set the value of your variable 
     Simple.deployed().then(function(instance){return instance.set(7);});   
+
+    # Debug your solidity
+    debug < transaction id >
